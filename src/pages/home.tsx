@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react"
 import Card from "../components/card"
 import Footer from "../components/footer"
 import Header from "../components/header"
