@@ -1,5 +1,6 @@
 {
   "name": "clothes",
+  "homepage": "https://bogaledemasrepo.github.io/smart-shop",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -12,6 +13,7 @@
   "dependencies": {
     "@tailwindcss/vite": "^4.1.17",
     "daisyui": "^5.5.11",
+    "gh-pages": "^6.3.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "react-router-dom": "^7.10.1",
