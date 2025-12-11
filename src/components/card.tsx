@@ -1,18 +1,16 @@
+import { useCart } from "../constext/cart-context";
+import type { Clothe } from "../data"
 
-function Card({data}:{data:{
-    product_id: string;
-    name: string;
-    category: string;
-    price: number;
-    in_stock: boolean;
-    image_url: string;
-    image_credit: string;
-    description:string;
-    variants: {
-        color_name: string;
-        size: string;
-        stock_level: number;
-    }[]}}) {
+function Card({data}:{data:Clothe}) {
+  const {addToCart,cart,removeFromCart}=useCart();
+  const handleAddToCart=(data:Clothe)=>{
+    const isItemInCart=cart.find(Item=>Item.product_id==data.product_id)
+    isItemInCart?removeFromCart(data.product_id):addToCart(data)
+  }
+  const cartIncludesData=(id:string)=>{
+    return cart.find(Item=>Item.product_id==id);
+
+  }
   return (
     <div className="card bg-base-100 w-96 shadow-sm">
   <figure>
@@ -25,7 +23,7 @@ function Card({data}:{data:{
     <p>{data.description}</p>
     <div className="card-actions justify-end">
       <p className="text-red-400 text-lg font-bold">${data.price}</p>
-      <button className="btn btn-primary">Add Cart</button>
+      <button onClick={()=>handleAddToCart(data)} className={cartIncludesData(data.product_id)?'btn':`btn btn-primary`}>{cartIncludesData(data.product_id)?'Remove From Cart':'Add Cart'}</button>
     </div>
   </div>
 </div>
