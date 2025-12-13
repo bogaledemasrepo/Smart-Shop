@@ -1,25 +1,31 @@
+import { useEffect, useState } from "react"
 import Card from "../components/card"
 import Footer from "../components/footer"
 import Header from "../components/header"
-import { data } from "../data"
+import { data, type Clothe } from "../data"
 
 
 function App() {
-  
-  
+  const [products,setProducts]=useState<Clothe[]>([]);
+  const [categories,setCategories]=useState<string[]>([])
+  const handleFilter=()=>{
+
+  }
+  useEffect(()=>{
+    setProducts(data);
+    setCategories([...(new Set(data.map(Item=>Item.category)))])
+  },[])  
   return (
-    <div className="w-full max-w-[820px] h-full mx-auto">
+    <div className="w-full max-w-[720px] h-full mx-auto">
       <Header />
       <div className="my-4 flex w-full justify-center">
         <div className="filter">
           <input className="btn filter-reset" type="radio" name="metaframeworks" aria-label="All"/>
-          <input className="btn" type="radio" name="metaframeworks" aria-label="Sveltekit"/>
-          <input className="btn" type="radio" name="metaframeworks" aria-label="Nuxt"/>
-          <input className="btn" type="radio" name="metaframeworks" aria-label="Next.js"/>
-        </div>
+          {categories.map(Item=><input key={Item} className="btn" type="radio" name="metaframeworks" aria-label={Item}/>)}
+          </div>
       </div>
-      <div className="w-full flex gap-4 flex-wrap my-4 justify-center">
-        {data.map((Item,index)=>{
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        {products.map((Item,index)=>{
           return <Card key={index}  data={Item}/>
         })}
       </div>

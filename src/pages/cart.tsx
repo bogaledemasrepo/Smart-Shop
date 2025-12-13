@@ -14,14 +14,18 @@ function CartPage() {
         <div className="w-full flex flex-col gap-2">
           
         {cart.length>0&&<>
-        <h1 className="text-xl font-semibold">Cart Content!</h1>
-        {
-        cart.map(Item=>{
-          return <CartCard key={Item.product_id} data={Item} />
-        })}
-        <div className="flex space-x-8 mt-3 w-full">
-          <button className="btn" onClick={clearCart}>Clear Cart</button>
-          <button className="btn btn-primary">Order now</button>
+       
+        <div className="p-2 mt-8 mb-4 flex flex-col gap-4">
+           <h1 className="text-xl font-semibold text-center ">Cart Content!</h1>
+          {
+          cart.sort((a,b)=>a.product_id.localeCompare(b.product_id)).map(Item=>{
+            return <CartCard key={Item.product_id} data={Item} />
+          })}
+        </div>
+         
+        <div className="flex space-x-8 mt-3 mx-auto">
+          <button className="btn  border border-blue-200" onClick={clearCart}>Clear Cart</button>
+          <button className="btn btn-primary">Bay now</button>
         </div>
         </>}
          {cart.length==0&&<>

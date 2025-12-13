@@ -22,7 +22,7 @@ export const data=[
     "price": 45.00,
     "in_stock": true,
     "description": "A heavyweight, soft cotton-blend crewneck sweater, featuring a timeless design and comfortable fit. Perfect for layering in cooler months.",
-    "image_url": "https://images.unsplash.com/photo-  -652ac237f372?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "image_url": "https://cdn-images.farfetch-contents.com/22/55/69/34/22556934_52567033_1000.jpg",
     "image_credit": "Photo by Charles Etoroma on Unsplash",
     "variants": [
       {"color_name": "Forest Green", "size": "M", "stock_level": 35},
@@ -33,10 +33,10 @@ export const data=[
     "product_id": "SKU007011",
     "name": "Women's Wide-Leg Linen Pants",
     "category": "Bottoms",
-    "price": 69.99,
+    "price": 69.00,
     "in_stock": true,
     "description": "High-waisted, wide-leg trousers made from a cool, breathable linen blend. Features a tie waist and side pockets for a relaxed, elegant look.",
-    "image_url": "https://images.unsplash.com/photo-1620023429381-169828236d14?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "image_url": "https://cdn-images.farfetch-contents.com/20/01/69/34/20016934_45138154_2048.jpg",
     "image_credit": "Photo by Artem Beliaikin on Unsplash",
     "variants": [
       {"color_name": "Natural Linen", "size": "S", "stock_level": 25},
@@ -50,7 +50,7 @@ export const data=[
     "price": 85.00,
     "in_stock": true,
     "description": "A classic denim jacket with an intentionally oversized fit and rugged construction. A perfect layering piece with four functional pockets.",
-    "image_url": "https://images.unsplash.com/photo-1551480106-95f228d447f5?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "image_url": "https://cdn-images.farfetch-contents.com/21/71/73/47/21717347_51940251_1000.jpg",
     "image_credit": "Photo by Lucas Andrade on Unsplash",
     "variants": [
       {"color_name": "Light Blue Wash", "size": "M", "stock_level": 40}
@@ -63,7 +63,7 @@ export const data=[
     "price": 19.99,
     "in_stock": true,
     "description": "A sleek, fitted tank top with a contemporary high neckline and fine vertical ribbing. Ideal as a base layer or worn on its own.",
-    "image_url": "https://images.unsplash.com/photo-1622631584347-19e99217e944?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "image_url": "https://cdn-images.farfetch-contents.com/17/69/11/47/17691147_37019541_2048.jpg",
     "image_credit": "Photo by Marcus Loke on Unsplash",
     "variants": [
       {"color_name": "White", "size": "XS", "stock_level": 70},
