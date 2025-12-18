@@ -1,8 +1,12 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import tailwindcss from '@tailwindcss/vite'
 
-// https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
-  base: '/Smart-Shop/', // Add this line!
+  // This is the most important line for GitHub Pages
+  base: '/Smart-Shop/', 
+  plugins: [
+    react(),
+    tailwindcss(),
+  ],
 })
