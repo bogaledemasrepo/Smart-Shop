@@ -1,17 +1,9 @@
 import { Link } from "react-router-dom"
 import { useCart } from "../constext/cart-context"
-import { useEffect, useState } from "react";
 
 function Header() {
   const {cart}=useCart();
-  const [subTotal,setSubTotal]=useState(0)
-  const calculateSubTotal=()=>{
-    const st = cart.reduce((a,b)=>a+(b.price),0)
-    setSubTotal(st)
-  }
-  useEffect(()=>{
-    calculateSubTotal();
-  },[])
+ 
   return (
     <div className="navbar bg-base-100 shadow-sm">
   <div className="flex-1">

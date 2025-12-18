@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useCallback, useEffect, useState } from "react"
 import Card from "../components/card"
 import Footer from "../components/footer"
 import Header from "../components/header"
@@ -8,13 +8,23 @@ import { data, type Clothe } from "../data"
 function App() {
   const [products,setProducts]=useState<Clothe[]>([]);
   const [categories,setCategories]=useState<string[]>([])
-  const handleFilter=()=>{
 
-  }
-  useEffect(()=>{
+  const handleFetchProduct=async ()=>{
+    await new Promise((res)=>{setTimeout(()=>{
+      res(true)
+    },500)});
     setProducts(data);
     setCategories([...(new Set(data.map(Item=>Item.category)))])
-  },[])  
+  }
+  const doSomething=useCallback(async ()=>{
+    await new Promise((res)=>{setTimeout(()=>{
+      handleFetchProduct();
+      res(true)
+    },500)});
+  },[])
+  useEffect(()=>{
+    doSomething();
+  },[doSomething])  
   return (
     <div className="w-full max-w-[720px] h-full mx-auto">
       <Header />

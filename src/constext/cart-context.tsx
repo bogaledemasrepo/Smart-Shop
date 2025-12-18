@@ -61,4 +61,5 @@ function CartProvider({children}:{children:ReactNode}) {
 
 export default CartProvider
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const useCart = ()=>useContext(CartContext)

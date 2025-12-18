@@ -6,6 +6,7 @@ function Card({data}:{data:Clothe}) {
   const {addToCart,cart,removeFromCart}=useCart();
   const handleAddToCart=(data:Clothe)=>{
     const isItemInCart=cart.find(Item=>Item.product_id==data.product_id)
+    // eslint-disable-next-line @typescript-eslint/no-unused-expressions
     isItemInCart?removeFromCart(data.product_id):addToCart({...data,quantity:1})
   }
   const cartIncludesData=(id:string)=>{
