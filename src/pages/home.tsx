@@ -4,7 +4,6 @@ import Footer from "../components/footer"
 import Header from "../components/header"
 import { data, type Clothe } from "../data"
 
-
 function App() {
   const [products,setProducts]=useState<Clothe[]>([]);
   const [categories,setCategories]=useState<string[]>([])
