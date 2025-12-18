@@ -13,7 +13,7 @@ import Detail from './pages/detail.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/Smart-Shop">
       <UserProvider>
         <CartProvider>
           <Routes>
