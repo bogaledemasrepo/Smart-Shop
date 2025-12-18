@@ -4,8 +4,8 @@ function Footer() {
    <footer className="footer sm:footer-horizontal bg-neutral-600 text-neutral-content p-4 flex flex-row justify-between items-center">
   <aside className="flex gap-4">
     <svg
-      width="50"
-      height="50"
+      width="40"
+      height="40"
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
       fillRule="evenodd"

@@ -24,7 +24,7 @@ function App() {
           {categories.map(Item=><input key={Item} className="btn" type="radio" name="metaframeworks" aria-label={Item}/>)}
           </div>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 p-4">
         {products.map((Item,index)=>{
           return <Card key={index}  data={Item}/>
         })}
